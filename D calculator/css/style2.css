@@ -1,0 +1,507 @@
+
+/*Calculator page styles*/
+.btn-calculate {
+    background: #F4922F;
+    color: #fff;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    text-align: center;
+    padding: 10px 20px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+    .btn-calculate:hover {
+        background: #72B032;
+    }
+
+select::-ms-expand {
+    display: none;
+}
+
+/* Coverage Type */
+#tierTypeSelection > section > div {
+    width: 70%;
+}
+
+.tierTypeFirstLabel {
+    vertical-align: top;
+}
+
+    .tierTypeFirstLabel > div {
+        width: 20%;
+        display: inline-block;
+        vertical-align: inherit;
+    }
+
+#coverageTypesContainer {
+    display: inline-block;
+   
+}
+
+    #coverageTypesContainer > div {
+        display: inline-block;
+        
+       
+        text-align: center;
+    }
+
+/* Annual Salary Tier Level */
+.annualSalaryTier * {
+    width: auto;
+}
+
+
+
+/* 3 Column Results View*/
+
+#selectedCostOptions {
+    line-height: 173%;
+	
+}
+
+    #selectedCostOptions > div {
+        width: 45%;
+        display: inline-block;
+		
+		
+    }
+#selectedCostOptions > div:nth-child(1) {
+       
+		text-align: right;
+	
+    }
+
+#selectedCostOptions > div:nth-child(1) span{
+       color: #f78d29;
+		width:25%;
+	display: inline-block;
+    }
+#selectedCostOptions > div:nth-child(1) p{
+       text-align: right;
+		width:75%;
+	display: inline-block;
+    }
+#selectedCostOptions > div:nth-child(1){
+       text-align: right;
+	
+    }
+#selectedCostOptions > div:nth-child(3) {
+       display: none;
+		
+    }
+#selectedCostOptions > div:nth-child(2) {
+      
+		
+    }
+
+#selectedCostOptions > div:nth-child(2) span{
+       color: #82bc41;
+		float:left;
+	width:25%;
+	display: inline-block;
+	text-align: left;
+    }
+#selectedCostOptions > div:nth-child(2) p{
+	display: inline-block;     
+	text-align: left;
+	width:75%;
+    }
+    #selectedCostOptions h4 {
+        color: #E48B1E;
+        font-size: 16px !important;
+    }
+#selectedCostOptions > div:nth-child(1) h4{
+  
+		border-bottom:#E48B1E 1px solid;
+		
+    }
+#selectedCostOptions > div:nth-child(2) h4{
+       color: #82bc41;
+	text-align: left;
+		border-bottom:#82bc41 1px solid;
+		
+    }
+#selectedCostOptions > div:nth-child(1) #maxmedicalrx{
+       display: none;
+		
+    }
+#selectedCostOptions > div:nth-child(1) #maxmedicalrx2{
+       display: none;
+		
+    }
+#selectedCostOptions > div:nth-child(2) #maxmedical{
+        display: none;
+		
+    }
+#selectedCostOptions > div:nth-child(2) #maxrx{
+       display: none;
+		
+    }
+
+#selectedCostOptionsReport {
+   
+	font-size: 12px;
+	text-align: right;
+	color:#707070;
+}
+#selectedCostOptionsReport  span{
+	width:20%;	
+	
+}
+
+
+    #selectedCostOptionsReport strong {
+        color: #72B032;
+    }
+
+#cost-option-placeholders {
+}
+
+
+
+/* Medical and Prescription Expenses*/
+
+#expenseAndResultsArea {
+    padding-top: 20px;
+}
+
+
+    #expenseSelection > section {
+        padding-bottom: 5px;
+    }
+
+    #expenseSelection a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    #expenseSelection span {
+        color: #c0c0c0;
+    }
+
+    #expenseSelection input {
+       
+    }
+
+/* Total Plan Costs*/
+
+
+#totalPlanCostsResults {
+    width: 100%;
+   
+}
+
+
+#planCostResultText {
+    width: 79%;
+    vertical-align: inherit;
+}
+
+    #planCostResultText > div {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+        #planCostResultText > div > div {
+            width: 29%;
+            float: left;
+        }
+
+            #planCostResultText > div > div:first-of-type {
+                width: 69%;
+                float: left;
+            }
+
+.ui-tooltip, .arrow:after {
+    background: #adff2f;
+    border: 2px solid white;
+}
+
+.ui-tooltip {
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 7px black;
+}
+
+.arrow {
+    width: 70px;
+    height: 16px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    bottom: -16px;
+}
+
+    .arrow.top {
+        top: -16px;
+        bottom: auto;
+    }
+
+    .arrow.left {
+        left: 20%;
+    }
+
+    .arrow:after {
+        content: "";
+        position: absolute;
+        left: 20px;
+        top: -20px;
+        width: 25px;
+        height: 25px;
+        box-shadow: 6px 5px 9px -9px black;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    .arrow.top:after {
+        bottom: -20px;
+        top: auto;
+    }
+
+.searchIcon-1 {
+    border-radius: 25%;
+    border: 2px solid #F7912F;
+    color: #72B032;
+    font-weight: 800;
+    text-align: center;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+#graphDisclaimer {
+    color: grey;
+    visibility: hidden;
+    width: 50%;
+    margin-left: 50%;
+}
+
+#disclaimerCYC {
+    color: grey;
+    font-size: 80%;
+}
+
+#calculatePlanCostsDisabled{
+    display:inline-block; 
+    padding-top:12px; 
+    padding-bottom:12px; 
+    opacity:.75
+}
+
+/***********Media Screen************/
+
+
+@media screen and (max-width: 500px) {
+    .calc_form .field span {
+        line-height: 16px;
+    }
+
+    #coverageTypesContainer {
+        
+    }
+
+        #coverageTypesContainer > div {
+            width: 24%;
+        }
+
+        #coverageTypesContainer span {
+            /*Changed on 9/15 here*/
+            font-size: 90%;
+        }
+
+    #selectedCostOptions > div {
+        width: 100%;
+        
+        margin-bottom: 2%;
+    }
+	.tempb{
+		margin-top:10px!important;
+	}
+	.slider1{
+		text-align: center!important;
+	}
+	.tempd{
+		float:none!important;
+		text-align: center!important;
+		display: block!important;
+		
+	}
+    #expenseSelection {
+        width: 98% !important;
+    }
+	#expenseSelection h3{
+		font-size: 16px!important;
+	}
+	.graphtext label{
+		font-size:18px;
+		
+	}
+    .searchIcon-1 {
+        display: none;
+    }
+
+	#graph1text{
+		font-size: 20px!important;
+	}
+	#graph2text{
+		font-size: 20px!important;
+	}
+    #footerPhoneNumber {
+        text-align: center;
+    }
+
+    #totalPlanCostsResults {
+        margin-top: 2%;
+        
+        text-align: center;
+        width: 100%;
+        display:none;
+    }
+
+    #graphDisclaimer {
+        color: grey;
+        visibility: hidden;
+        width: 100%!important;
+        margin-left: 0px!important;
+    }
+
+    .dropDownAnnualSalaryTier .clearfix{
+        display: inline-block;
+        width:140%;
+    }
+
+    .dropDownAnnualSalaryTier span{
+        width:98%;
+    }
+
+    .dropDownAnnualSalaryTier label{
+        
+		width: 100%;
+		text-align: center;
+		
+    }
+	.annualSalaryTier select {
+        
+		margin-top:6px;
+		top:0px!important;
+    }
+	#selectedCostOptions h4{
+		text-align: center!important;
+	}
+	#selectedCostOptions p{float:none!important;text-align: left!important;}
+	#selectedCostOptions span{float:none!important;text-align: right!important;}
+
+    #tierTypeSelection > section > div {
+    width: 86%;
+    /*field_holder*/
+    /*Changed on 9/15 here*/
+    }
+	
+	#temp1{
+		width:35%!important;
+	}
+	.temp5{
+		    width: 80%;
+  
+    vertical-align: top;
+	}
+}
+@media screen and (max-width: 750px) {
+	#expenseSelection{
+		width: 90%;
+	}
+	
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 80%;
+  height: 20px;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: #e0e0e0;
+  border-radius: 6.8px;
+  border: 0px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 0px solid #000000;
+  height: 26px;
+  width: 26px;
+  border-radius: 50px;
+  background: #59595b;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -8.8px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #ededed;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: #e0e0e0;
+  border-radius: 6.8px;
+  border: 0px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 0px solid #000000;
+  height: 26px;
+  width: 26px;
+  border-radius: 50px;
+  background: #59595b;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #d3d3d3;
+  border: 0px solid #010101;
+  border-radius: 13.6px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: #e0e0e0;
+  border: 0px solid #010101;
+  border-radius: 13.6px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 0px solid #000000;
+  height: 26px;
+  width: 26px;
+  border-radius: 50px;
+  background: #59595b;
+  cursor: pointer;
+  height: 8.4px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #e0e0e0;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #ededed;
+}
+
+/*simple grd*/
+
+

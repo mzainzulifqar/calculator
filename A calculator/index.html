@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ 
+    <link type="text/css" rel="stylesheet" media="all" href="css/simple-grid.css"/>
+    <link type="text/css" rel="stylesheet" media="all" href="css/style.css"/>
+    
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <script src="js/jquery.min.js" type="text/javascript"></script> 
+    
+ <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />.
+
+ <style>
+	#tooltip
+{
+    text-align: center;
+    color: #fff;
+    background: #F78D29;
+    position: absolute;
+    z-index: 100;
+    padding: 15px;
+}
+ 
+    #tooltip:after /* triangle decoration */
+    {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #111;
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+        margin-left: -10px;
+    }
+ 
+        #tooltip.top:after
+        {
+            border-top-color: transparent;
+            border-bottom: 10px solid #111;
+            top: -20px;
+            bottom: auto;
+        }
+ 
+        #tooltip.left:after
+        {
+            left: 10px;
+            margin: 0;
+        }
+ 
+        #tooltip.right:after
+        {
+            right: 10px;
+            left: auto;
+            margin: 0;
+        }</style>
+</head>
+
+<body>
+ 
+
+ <div class="container" style="padding:0px;background: #fff;"><div class="center" >
+                         
+  
+                        <div class="interiorbanner" >
+                            <div style="background: #fff;height: 14px;">
+                               </div>
+                                <h2>MEDICAL & PRESCRIPTION DRUG</h2>
+                                <h1>Plan Comparison Calculator</h1>
+                                <p>Use this simple calculator to determine which plan is right for you</p>
+                            
+                        </div>
+                
+  
+	                   
+                            
+    <div class="calc">
+       
+
+                    <div id="hormelHealthPlanCalculator" class="calc_form">
+                        <div >
+                           
+                                
+
+                                   
+                                    <div class="coveragetypediv"  style="padding-top:20px;padding-bottom: 15px;margin-bottom: 25px;">                                     
+                                        <!--
+                                        <div id="coverageTypesContainer">
+                                            
+                                        </div>
+                                        -->
+                                        
+                                            <div class="dropDownAnnualSalaryTier" style="margin-bottom: 20px;" >
+                                        <div class="annualSalaryTier">
+                                            <label>COVERAGE TYPE</label>
+                                           
+                                                <select name="selectCoverageTypes" id="coverageTypesContainer">
+                                                         
+                                                </select>
+                                            
+                                        </div>
+                                    </div>
+                                        
+                                         
+                                    <div class="dropDownAnnualSalaryTier">
+                                        <div class="annualSalaryTier" >
+                                            <label >ANNUAL SALARY TIER LEVEL</label>
+                                            
+                                                <select name="selectSalaryTier" id="selectSalaryTier" style="position: relative;top:-16px;">
+                                   
+                                                </select>
+                                           
+                                        </div>
+                                    </div>
+                                        
+                                        
+                                    </div>
+                                   
+                                    
+
+                                   
+                                
+                                
+                        
+                        </div>
+<center>
+                         <div id="expenseSelection">
+                               
+                                <section>
+                                    <div id="">
+                                        <div style="height: 40px;" class="slider1">
+                                          <h4  title="Enter your estimated total annual medical expenses for you and all your dependents. This would include all estimated medical expenses to be paid by you and the health plan. (i.e. office visits costs, lab fees, hospital expenses, etc.). DO NOT include your prescription drug expenses." rel="tooltip">?</h4>
+                                           <h3>TOTAL MEDICAL EXPENSES:</h3> 
+                                           <h3 style="float: right;font-size: 24px;" id="nonRxMedExpensevalue" class="tempd">$10,000</h3>
+                                        
+                                        </div>
+                                        <div style="text-align: center;" class="tempb">
+                                        <input id="nonRxMedExpense" class="nonRxMedExpense user-expense-input" value="10000" type="range"   min="100" max="40000"  step="100"/><div class="sliderrangebox center"><span style="float:left;">$100</span><span style="float:right;">$40,000</span></div></div>
+                                    </div>
+                                </section>
+                                
+                                <section style="margin-top: 20px;">
+                                    <div id="">
+                                        <div class="medHintBox slider1" >
+                                           <h4 title="Enter your estimated total annual prescription drug expenses for you and all your dependents, paid by you and the health plan. To assist in your estimation, refer to the letter you received from Prime Therapeutics for your year-to-date 2018 total spend." style="" rel="tooltip">?</h4>
+                                            <h3 class="temp5">TOTAL PRESCRIPTION DRUG EXPENSES</h3>
+                                            <h3 style="float: right;font-size: 24px;" id="totalRxExpensesvalue" class="tempd">$1,500</h3>
+                                        
+                                        </div>
+                                         <div style="text-align: center;margin-top: 10px;" class="" >
+                                        <input type="range" id="totalRxExpenses" class="totalRxExpenses user-expense-input" value="1500"  min="100" max="5000"  step="100"/><div class="sliderrangebox center"><span style="float:left;">$100</span><span style="float:right;">$5,000</span></div></div>
+                                    </div>
+                                </section>
+                                
+                                <div class="calculate" style="display: none;">
+                                    <button id="calculatePlanCosts" class="btn-calculate" style="display:none">Calculate Plan Costs</button>
+                                    <div id="calculatePlanCostsDisabled" title="Please select a Coverage Type and an Annual Salary Tier before calculating your plan costs." class="btn-calculate">
+                                        Calculate Plan Costs
+                                    </div>
+                                </div>
+                            </div>
+                       </center>
+                       
+                        
+
+     
+                        <div id="expenseAndResultsArea" style="display: none;">
+                          
+
+                            <div id="totalPlanCostsResults">
+                                
+                               
+
+                                <div id="totalCostGraphContainer"></div>
+                                
+                                
+
+                            </div>
+                        </div>
+                        
+                        <div class="center" style="width: 80%;border: 1px solid #ccc;margin-top: 28px;padding-bottom: 16px;">
+                        
+                        <div class="graphtext" style="margin-top: 25px;">
+                                    <label>ESTIMATED AMOUNT YOU PAY PER YEAR</label>
+                                </div>
+                        
+                        <div class="customgraph center">
+                        	<div class="graphsubbox" style="width: 18%!important;" ><label></label></div>
+                        	<div class="graphsubbox"><div style="background: #f78d29;display: block;height: 4px;" id="graph1chart"></div></div>
+                        	<div class="graphsubbox" style="width:2%;height: 150px;"></div>
+                        	<div class="graphsubbox"><div style="background: #82bc41;display: block;height: 4px;" id="graph2chart"></div></div>
+                        	<div class="graphsubbox" ></div>
+                        	
+                        	<br>
+                        	<div style="display: block;min-height: 50px;">
+                        	<center>
+                        	<div class="graphsubbox" style="width:40%;" id="temp1"><label style="display: block;font-weight: bold;font-size:38px;color:#f26827;text-align: right;" id="graph1text"></label></div>
+                        	<div class="graphsubbox" style="width:2%;height: 40px"></div>
+                        	<div class="graphsubbox"  style="width:40%;"><label id="graph2text" style="display: block;font-weight: bold;font-size:38px;color:#5e8f3f;text-align: left;" ></label></div>
+                        	</center>
+                        	</div>
+                        </div>
+                                
+                                
+                        
+                        
+                        
+                        <div id="planOptions">
+                            <section>
+                                <div id="selectedCostOptions" class="center">
+                                    <!-- tmpl-cost-options -->
+                                </div>
+                            </section>
+                        </div>
+                        
+                        <div style="text-align: center;font-size: 10px;color:#666;">*OOP = Out-of-Pocket</div>
+                        
+                        </div>
+                        <center style="color:#888;margin-top:10px; ">
+                        <p style="font-size:8px;width:80%;">This calculator is intended to be illustrative and used merely as a planning tool. It is not meant as tax or investment advice. Before taking any action based upon the results provided, please consult with a tax consultant or expert.</p></center>
+                    </div>
+                </div>
+                 
+                 
+                 
+                 <div style="height: 40px;"></div>
+           
+
+         
+
+                <link rel="stylesheet" type="text/css" href="css/style2.css"/>
+                <script src="js/jquery-ui.js" type="text/javascript"></script>
+
+                <script src="js/handlebars.js" type="text/javascript"></script>
+                <script src="js/calc/hormel-hsa/barGraph.js" type="text/javascript"></script>
+                <script src="js/calc/hormel-hsa/hormelHSAData.js" type="text/javascript"></script>
+                <script src="js/calc/hormel-hsa/hormelHSALogic.js" type="text/javascript"></script>
+                <script src="js/calc/hormel-hsa/hormelHSAPage.js" type="text/javascript"></script>
+
+        
+                <script type="text/x-handlebars-template" id="tmpl-coverage-types">
+				<option value="0">Choose a coverage level</option> 
+                    {{#each coverageTypes}}
+					<option value="{{key}}">{{display}}</option>                   
+                    {{/each}}
+                </script>
+
+                <script type="text/x-handlebars-template" id="tmpl-salary-tiers">
+                   <option value="0">Choose an annual salary level</option> 
+                    {{#each tiers}}
+                    <option value="{{key}}">{{display}}</option>
+                    {{/each}}
+                </script>
+
+                <script type="text/x-handlebars-template" id="tmpl-cost-options">
+                    {{#each costOptions}}
+                        <div style="vertical-align:top;">
+						<div style="background:#fff;border-radius:12px;padding:10px;">
+                            <h4><strong>{{plan.display}}</strong></h4>
+                            <div id="selectedCostOptionsReport" >
+                                <div><p>Yearly Contribution </p><span>${{formatAsMoney yearlyContribution 0}}</span></div>
+                                <div class="annualdeductible"><p>Annual Deductible </p><span>${{formatAsMoney annualDeductable 0}}</span></div>
+                                <div id="maxmedical"><p>Annual OOP* Max Medical</p><span>${{formatAsMoney maxOOP 0}}</span></div>
+								<div id="maxrx"><p>Annual OOP* Max RX</p><span>${{formatAsMoney employerHSAContribution 0}}</span></div>
+								<div id="maxmedicalrx" ><p>Annual Out-of-Pocket Max Medical & RX</p><span>${{formatAsMoney maxOOP 0}}</span></div>
+					            <div id="maxmedicalrx2" style="display:none;" ><span></span></div>                                
+                            </div>
+							</div>
+                        </div>
+                    {{/each}}
+                </script>
+
+                <script type="text/x-handlebars-template" id="tmpl-cost-option-placeholders">
+                    {{#each plans}}
+                        <div id="cost-option-placeholders" style="vertical-align:top;">
+						<div style="background:#fff;border-radius:12px;padding:10px;">
+                            <h4><strong>{{display}}</strong></h4>
+                            <div>
+                                <div><p>Yearly Contribution </p><span>-</span></div>
+                                <div class="annualdeductible"><p>Annual Deductible </p><span>-</span></div>
+                                <div id="maxmedical"><p>Annual OOP* Max Medical</p><span>-</span></div>
+								<div id="maxrx"><p>Annual OOP* Max RX</p><span>-</span></div>
+								<div id="maxmedicalrx"><p>Annual OOP* Max Medical & RX</p><span>-</span></div>
+								<div id="maxmedicalrx2" style="display:none;"><span>-</span></div>   
+                            </div>
+							</div>
+                        </div>
+                    {{/each}}
+                </script>
+
+                <script type="text/x-handlebars-template" id="tmpl-plan-cost-outcomes">
+                    {{#each plansCostOutcomes}}
+                        <div id="" class="clearfix" style="">
+                            <div style="">{{plan.display}}: </div>
+                            <div style=""><strong style="color: {{plan.graphColor}}">${{formatAsMoney totalCost 0}}</strong></div>
+                        </div>
+                    {{else}}
+                    <div>An error has occurred.</div>
+                    {{/each}}
+                </script>
+            
+				</div></div>
+       
+	
+                    
+	    
+ <!--tooltip-->
+ 
+ <style>::-ms-tooltip { display: none; }
+	#selectedCostOptions > div:nth-child(1) .annualdeductible{
+	
+	border-bottom: #E48B1E 1px solid;
+	 }
+	#selectedCostOptions > div:nth-child(2) .annualdeductible{
+	
+	border-bottom: #82bc41 1px solid;
+	 }</style>
+ 
+ <script>$( function()
+{
+    var targets = $( '[rel~=tooltip]' ),
+        target  = false,
+        tooltip = false,
+        title   = false;
+ 
+    targets.bind( 'mouseenter', function()
+    {
+        target  = $( this );
+        tip     = target.attr( 'title' );
+        tooltip = $( '<div id="tooltip"></div>' );
+ 
+        if( !tip || tip == '' )
+            return false;
+ 
+        target.removeAttr( 'title' );
+        tooltip.css( 'opacity', 0 )
+               .html( tip )
+               .appendTo( 'body' );
+ 
+        var init_tooltip = function()
+        {
+            if( $( window ).width() < tooltip.outerWidth() * 1.5 )
+                tooltip.css( 'max-width', $( window ).width() / 2 );
+            else
+                tooltip.css( 'max-width', 340 );
+ 
+            var pos_left = target.offset().left + ( target.outerWidth() / 2 ) - ( tooltip.outerWidth() / 2 ),
+                pos_top  = target.offset().top - tooltip.outerHeight() - 20;
+ 
+            if( pos_left < 0 )
+            {
+                pos_left = target.offset().left + target.outerWidth() / 2 - 20;
+                tooltip.addClass( 'left' );
+            }
+            else
+                tooltip.removeClass( 'left' );
+ 
+            if( pos_left + tooltip.outerWidth() > $( window ).width() )
+            {
+                pos_left = target.offset().left - tooltip.outerWidth() + target.outerWidth() / 2 + 20;
+                tooltip.addClass( 'right' );
+            }
+            else
+                tooltip.removeClass( 'right' );
+ 
+            if( pos_top < 0 )
+            {
+                var pos_top  = target.offset().top + target.outerHeight();
+                tooltip.addClass( 'top' );
+            }
+            else
+                tooltip.removeClass( 'top' );
+ 
+            tooltip.css( { left: pos_left, top: pos_top } )
+                   .animate( { top: '+=10', opacity: 1 }, 50 );
+        };
+ 
+        init_tooltip();
+        $( window ).resize( init_tooltip );
+ 
+        var remove_tooltip = function()
+        {
+            tooltip.animate( { top: '-=10', opacity: 0 }, 50, function()
+            {
+                $( this ).remove();
+            });
+ 
+            target.attr( 'title', tip );
+        };
+ 
+        target.bind( 'mouseleave', remove_tooltip );
+        tooltip.bind( 'click', remove_tooltip );
+    });
+});
+	
+	
+	
+	jQuery( document ).ready(function() {
+
+	
+	
+	
+	$('#nonRxMedExpense').on('input', function (e) {
+   document.getElementById('nonRxMedExpensevalue').innerHTML='$'+parseInt(document.getElementById('nonRxMedExpense').value).toLocaleString();
+});
+		
+		$('#nonRxMedExpense').on('propertychange change', function (e) {
+			document.getElementById('nonRxMedExpensevalue').innerHTML='$'+parseInt(document.getElementById('nonRxMedExpense').value).toLocaleString();
+			
+			
+		})
+		
+		
+		
+		$('#totalRxExpenses').on('input', function (e) {
+   document.getElementById('totalRxExpensesvalue').innerHTML='$'+parseInt(document.getElementById('totalRxExpenses').value).toLocaleString();
+});
+		
+		$('#totalRxExpenses').on('propertychange change', function (e) {
+			document.getElementById('totalRxExpensesvalue').innerHTML='$'+parseInt(document.getElementById('totalRxExpenses').value).toLocaleString();
+			
+			
+		})
+	
+	});
+								 
+								 
+								 
+
+		
+	
+	</script>
+   
+</body>
+
+
+
+
+ 
+</html>
