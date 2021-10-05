@@ -1,4 +1,4 @@
-﻿
+
 var hormelHSAData = new (function () {
 
     var data = this;
@@ -132,11 +132,11 @@ var hormelHSAData = new (function () {
         option.coverageType = data.coverageTypes.EmployeeOnly;
         option.tier = data.tiers.tier1;
         option.plan = data.plans.HSP1;
-        option.yearlyContribution =  884.00;
+        option.yearlyContribution =  988.00;
         option.annualDeductable = 2000.00;
         option.maxOOP = 4500.00;
         option.employerHSAContribution = 0;
-		option.maxvalue = 5384;
+		option.maxvalue = 5488;
 
         return option;
     })());
@@ -163,11 +163,11 @@ var hormelHSAData = new (function () {
         option.coverageType = data.coverageTypes.EmployeeOnly;
         option.tier = data.tiers.tier1;
         option.plan = data.plans.Traditional;
-        option.yearlyContribution = 1300.00;
-        option.annualDeductable = 750.00;
-        option.maxOOP = 2000.00;
-        option.employerHSAContribution = 3750.00;
-		option.maxvalue = 7050;
+        option.yearlyContribution = 1404.00;
+        option.annualDeductable = 800.00;
+        option.maxOOP = 5750.00;
+        option.employerHSAContribution = 0.00;
+		option.maxvalue = 7154;
 
         return option;
     })());
@@ -274,11 +274,11 @@ var hormelHSAData = new (function () {
         option.coverageType = data.coverageTypes.EmployeeChildren;
         option.tier = data.tiers.tier1;
         option.plan = data.plans.HSP1;
-        option.yearlyContribution = 1248.00;
+        option.yearlyContribution = 1404.00;
         option.annualDeductable = 4000.00;
         option.maxOOP = 9000.00;
         option.employerHSAContribution = 0.00;
-		option.maxvalue = 10248;
+		option.maxvalue = 10404;
 
         return option;
     })());
@@ -305,11 +305,11 @@ var hormelHSAData = new (function () {
         option.coverageType = data.coverageTypes.EmployeeChildren;
         option.tier = data.tiers.tier1;
         option.plan = data.plans.Traditional;
-        option.yearlyContribution = 2028.00;
-        option.annualDeductable = 2250.00;
-        option.maxOOP = 4000.00;
-        option.employerHSAContribution = 8250.00;
-		option.maxvalue =14278;
+        option.yearlyContribution = 2340.00;
+        option.annualDeductable = 1600.00;
+        option.maxOOP = 12250.00;
+        option.employerHSAContribution = 0.00;
+		option.maxvalue =14590;
 
         return option;
     })());
@@ -414,11 +414,11 @@ var hormelHSAData = new (function () {
         option.coverageType = data.coverageTypes.EmployeeSpouse;
         option.tier = data.tiers.tier1;
         option.plan = data.plans.HSP1;
-        option.yearlyContribution = 2184.00;
+        option.yearlyContribution = 2340.00;
         option.annualDeductable = 4000.00;
         option.maxOOP = 9000.00;
         option.employerHSAContribution = 0.00;
-		option.maxvalue = 10924;
+		option.maxvalue = 11340;
 
         return option;
     })());
@@ -445,11 +445,11 @@ var hormelHSAData = new (function () {
         option.coverageType = data.coverageTypes.EmployeeSpouse;
         option.tier = data.tiers.tier1;
         option.plan = data.plans.Traditional;
-        option.yearlyContribution = 3744.00;
-        option.annualDeductable = 1500.00;
-        option.maxOOP = 4000.00;
-        option.employerHSAContribution = 7500.00;
-		option.maxvalue = 14880;
+        option.yearlyContribution = 3952.00;
+        option.annualDeductable = 1600.00;
+        option.maxOOP = 11500.00;
+        option.employerHSAContribution = 0.00;
+		option.maxvalue = 15452;
 
         return option;
     })());
@@ -554,11 +554,11 @@ var hormelHSAData = new (function () {
         option.coverageType = data.coverageTypes.Family;
         option.tier = data.tiers.tier1;
         option.plan = data.plans.HSP1;
-        option.yearlyContribution = 2288.00;
+        option.yearlyContribution = 2392.00;
         option.annualDeductable = 4000.00;
         option.maxOOP = 9000.00;
         option.employerHSAContribution =  0.00;
-		option.maxvalue =11080;
+		option.maxvalue =11392;
 
         return option;
     })());
@@ -585,11 +585,11 @@ var hormelHSAData = new (function () {
         option.coverageType = data.coverageTypes.Family;
         option.tier = data.tiers.tier1;
         option.plan = data.plans.Traditional;
-        option.yearlyContribution = 3848.00;
-        option.annualDeductable = 2250.00;
-        option.maxOOP = 4000.00;
-        option.employerHSAContribution = 8250.00;
-		option.maxvalue =15786;
+        option.yearlyContribution = 4004.00;
+        option.annualDeductable = 1600.00;
+        option.maxOOP = 12250.00;
+        option.employerHSAContribution = 0.00;
+		option.maxvalue =16254;
 
         return option;
     })());
